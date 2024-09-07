@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin-top: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: black;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: center;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin-right: 80px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.main-content {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Flexbox layout for title and dinosaur image */
+.title-and-image {
+    display: flex;
+    /* Enable flexbox for this container */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.title-section {
+    text-align: left;
+    margin-left: 120px;
+    flex: 1;
+    /* Make the title section take the remaining space */
+}
+
+.title-section h1 {
+    font-size: 64px;
+}
+
+.dino-image {
+    flex-shrink: 0;
+
+}
+
+.dino-image img {
+    width: 400px;
+    height: auto;
+}
+
+.signup-banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.signup-banner h1 a {
+    color: #e33d26;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-radius: 62px;
+}
+
+.promotion {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 120px;
+}
+
+.sponsor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 120px;
+}
+
+.sponsor img {
+    width: 50px;
+    margin-right: 10px;
+}
