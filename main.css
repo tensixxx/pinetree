@@ -89,3 +89,105 @@ button:hover {
     background-color: #f8d7da;
     color: #000;
 }
+
+/*
+@media (max-width: 500px) {
+
+    .workshop-cards,
+    .gallery-cards {
+        flex-direction: column;
+        
+        align-items: center;
+       
+    }
+
+    .card {
+        width: 90%;
+        
+        margin-bottom: 20px;
+        
+        padding: 15px;
+        
+        font-size: 14px;
+        
+    }
+
+    .card img {
+        width: 100%;
+        
+        height: auto;
+    }
+
+    .card p {
+        font-size: 14px;
+       
+    }
+
+    button {
+        padding: 8px 16px;
+        
+        font-size: 14px;
+        
+    }
+
+    .view-all {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+*/
+
+@media (max-width: 500px) {
+
+    .workshop-cards,
+    .gallery-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        /* 不换行 */
+        overflow-x: auto;
+        /* 允许水平滚动 */
+        scroll-behavior: smooth;
+        /* 滚动时平滑过渡 */
+        padding: 10px 0;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        /* 保持卡片的宽度固定 */
+        width: 80%;
+        /* 卡片占据80%的屏幕宽度 */
+        margin-right: 10px;
+        /* 卡片之间的间距 */
+        padding: 15px;
+        /* 缩小内边距 */
+        font-size: 14px;
+        scroll-snap-align: center;
+        /* 滚动时卡片对齐中心 */
+    }
+
+    .workshop-cards::-webkit-scrollbar,
+    .gallery-cards::-webkit-scrollbar {
+        display: none;
+        /* 隐藏滚动条 */
+    }
+
+    .card img {
+        width: 100%;
+        /* 保持图片的宽度与卡片一致 */
+        height: auto;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .view-all {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
