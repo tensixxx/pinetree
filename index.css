@@ -49,11 +49,20 @@ body {
 
 }
 
+
 .title-section {
     text-align: left;
     margin-left: 120px;
     flex: 1;
-    /* Make the title section take the remaining space */
+
+}
+
+@media (max-width: 500px) {
+    .title-section {
+        text-align: left;
+        margin-left: 5px;
+        flex: 1;
+    }
 }
 
 .title-section h1 {
@@ -70,6 +79,13 @@ body {
     width: 400px;
     height: auto;
 
+}
+
+@media (max-width: 500px) {
+
+    .dino-image img {
+        display: none;
+    }
 }
 
 .animated-dino {
@@ -133,6 +149,14 @@ body {
     font-family: 'Aboreto', cursive;
 }
 
+@media (max-width: 500px) {
+    .promotion {
+        text-align: left;
+        margin-left: 8px;
+        flex: 1;
+    }
+}
+
 .sponsor {
     display: flex;
     align-items: center;
@@ -145,4 +169,12 @@ body {
 .sponsor img {
     width: 50px;
     margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+    .sponsor {
+        text-align: left;
+        margin-left: 5px;
+        flex: 1;
+    }
 }
