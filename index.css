@@ -11,6 +11,27 @@ body {
     margin-top: 100px;
 }
 
+.signup-banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* 保证 signup-banner 在 header 之上 */
+    font-family: 'Aboreto', cursive;
+}
+
+.signup-banner h1 a {
+    color: #e33d26;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Aboreto', cursive;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,12 +41,12 @@ body {
     color: black;
     position: fixed;
     top: 50px;
+    /* 向下移动 50px，避免与 signup-banner 重叠 */
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 500;
     justify-content: center;
 }
-
 
 .header nav a {
     color: black;
@@ -33,6 +54,7 @@ body {
     margin-left: 20px;
     font-size: 18px;
     font-family: 'Aboreto', cursive;
+    z-index: 999;
 }
 
 .main-content {
@@ -43,18 +65,14 @@ body {
 /* Flexbox layout for title and dinosaur image */
 .title-and-image {
     display: flex;
-    /* Enable flexbox for this container */
     justify-content: space-between;
     align-items: center;
-
 }
-
 
 .title-section {
     text-align: left;
     margin-left: 120px;
     flex: 1;
-
 }
 
 @media (max-width: 500px) {
@@ -78,11 +96,9 @@ body {
 .dino-image img {
     width: 400px;
     height: auto;
-
 }
 
 @media (max-width: 500px) {
-
     .dino-image img {
         display: none;
     }
@@ -90,7 +106,6 @@ body {
 
 .animated-dino {
     animation: jump 2s infinite;
-
 }
 
 @keyframes jump {
@@ -102,30 +117,9 @@ body {
         transform: translateY(-20px);
     }
 
-
     100% {
         transform: translateY(0);
     }
-}
-
-.signup-banner {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    font-family: 'Aboreto', cursive;
-}
-
-.signup-banner h1 a {
-    color: #e33d26;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Aboreto', cursive;
 }
 
 .signup-btn {
