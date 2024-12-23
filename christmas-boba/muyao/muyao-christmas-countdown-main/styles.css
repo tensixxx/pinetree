@@ -1,0 +1,167 @@
+h1, h2, h3{
+    text-align: center;
+    color: #c3bbd4;
+    text-shadow: 0px 0px 10px #7D709A;
+    font-family: 'Brush Script MT', cursive;
+}
+
+h1{
+    font-size: 7vmin;
+}
+
+h2{
+    font-size: 4vmin;
+}
+
+h3{
+    font-size: 2.5vmin;
+    width: 7vw;
+    height: 5vh;
+    justify-self: center;
+}
+
+body{
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+}
+
+#header-inner{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: #1C1450;
+    width: 60vw;
+    /* box-shadow: 0px 0px 10px #9b8fe3; */
+}
+
+#header-outer{
+    align-self: center;
+    position: relative;
+    top: 10vh;
+    left: calc(50vw - (60vw + 20px)/2);
+    width: calc(60vw + 20px);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 10px;
+    border-color: #332D71;
+    padding: 5px;
+    box-shadow: 0px 0px 10px #908ad3;
+    /* justify-self: center; */
+}
+
+#countdown{
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    height: 40vh;
+    width: 50vw;
+    left: 25vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+}
+
+.time-container{
+    display: inline;
+    float: left;
+    width: 7vw;
+    height: 20vh;
+    margin: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    justify-content: center;
+
+    transition: transform 0.1s;
+}
+
+.time-container:hover{
+    transform: scale(1.1);
+}
+
+#mo, #d, #h, #mi, #s{
+    font-size: 4vmin;
+    font-family: "sans-serif"
+}
+
+
+@keyframes fall{
+    from{
+        transform: translateY(-100vh);
+        right: var(--pos);
+    }
+    to{
+        transform: translateY(0vh);
+        right: var(--pos);
+    }
+}
+
+@keyframes streak{
+    from{
+        bottom: var(--start-y);
+        left: var(--start-x);
+    }
+    to{
+        bottom: var(--end-y);
+        left: var(--end-x);
+    }
+}
+
+.snow{
+    position: fixed;
+    bottom: 0;
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    --delay: 2s;
+    --pos: 101vw;
+
+    animation: fall 3s ease-in var(--delay) infinite;
+
+}
+
+#shooting-star{
+    transform: rotate(45deg);
+    height: 4px;
+    width: 256px;
+
+}
+
+#star-container{
+    position: fixed;
+    --start-x: 0vmax;
+    --start-y: 100vmax;
+    --end-x: 100vmax;
+    --end-y: 0vmax;
+    animation: streak 1.75s linear 0s infinite;
+    
+}
+
+#audio-controls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#background-music-button{
+    height: 10vmin;
+    width: 10vmin;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-style: solid;
+    border-color: #332D71;
+    text-shadow: 0px 0px 5px #7D709A;
+    color: #c3bbd4;
+    border-radius: 25%;
+
+    transition: scale 0.2s;
+
+}
+
+#background-music-button:hover{
+    transform: scale(1.025);
+    background-color: #332D71;
+    box-shadow: 0px 0px 5px #7D709A;
+}
+
